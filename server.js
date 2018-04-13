@@ -609,7 +609,7 @@ io.on('connection', socket => {
 				}
 				socket.emit(request.responseName || 'sign_s3', {
 					signed: data,
-					url: 'https://' + S3_BUCKET + '.s3.amazonaws.com/',
+					url: 'https://' + S3_BUCKET + '.s3.amazonaws.com/' + key,
 					id: file._id + ''
 				});
 			});
